@@ -1,0 +1,63 @@
+{
+  "name": "Save Restricted Content Downloader Bot",
+  "description": "Telegram Save Restricted Content Downloader built with Kurigram, Kuricrypt, and MongoDB.",
+  "keywords": [
+    "telegram",
+    "kurigram",
+    "downloader",
+    "batch",
+    "mongodb"
+  ],
+  "repository": "https://github.com/sheffykhlg/src-4",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from my.telegram.org",
+      "value": "12345678",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from my.telegram.org",
+      "value": "your_api_hash_here",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "value": "1234567890:YOUR_BOT_TOKEN_HERE",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "Your MongoDB Atlas Connection String",
+      "value": "mongodb+srv://username:password@cluster.mongodb.net/?appName=cluster",
+      "required": true
+    },
+    "LOG_GROUP_ID": {
+      "description": "Telegram Log Group ID (Optional)",
+      "value": "",
+      "required": false
+    },
+    "LOG_CHANNEL_ID": {
+      "description": "Telegram Log Channel ID (Optional)",
+      "value": "",
+      "required": false
+    },
+    "ENCRYPTION_KEY": {
+      "description": "Custom AES-256 Secret Encryption Key (DONT CHANGE THIS KEY)",
+      "value": "SAMRA_SECURE_AES256_ENGINE_KEY_DO_NOT_CHANGE",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "heroku-community/apt"
+    }
+  ]
+}

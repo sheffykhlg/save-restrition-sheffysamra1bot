@@ -1,0 +1,8 @@
+kurigram
+kuricrypt
+uvloop; sys_platform != 'win32'
+pymongo
+dnspython
+certifi
+imageio-ffmpeg
+cryptography
